@@ -1,0 +1,11 @@
+dev/
+dist/
+build/
+node_modules/
+
+*.rar
+*.zip
+package-lock.json
+yarn*
+
+src/templates/mixins/version.pug

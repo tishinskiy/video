@@ -1,0 +1,384 @@
+$mw_d: 1200px
+$mw_c: 960px
+$mw_b: 700px
+$mw_a: 460px
+
+$red: #df3b3b
+$grafit: #313234
+$gray_1: #58586A
+$gray_2: #7F8390
+$gray_3: #4a4a4a
+$gray_4: #bdbdbd
+
+$gray: $gray_1
+
+=fz_n
+	font-size: 1rem
+
+=fz_b
+	font-size: calc(1rem + 6px)
+
+=fz_h
+	font-size: 30px
+
+=fz_s
+	font-size: calc(1rem - 2px)
+
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	outline: none
+
+html
+	height: 100%
+
+.font-family
+	font-family: 'PTSans', Serif, Arial
+
+body
+	height: 100%
+	min-height: 100%
+	font-family: 'PTSans', Serif, Arial
+	font-size: 16px
+	line-height: 1.5
+	color: $grafit
+	background: #fff
+	// padding-top: 50px
+
+	@media (min-width: $mw_c)
+		// padding-top: 0
+		display: flex
+		flex-flow: column nowrap
+		justify-content: space-between
+
+a
+	color: $grafit
+
+	&:hover
+		text-decoration: none
+
+	&[href^='tel']
+		text-decoration: none
+
+.link
+	text-decoration: none
+	border-bottom: 1px dotted currentColor
+	&:hover
+		border-bottom-color: transparent
+.link--dotted
+	border-bottom-style: dotted
+
+.page-wrap
+	// overflow: hidden
+
+	// @media (max-width: $mw_c)
+	// 	margin-top: 43px !important
+
+	// @media (min-width: $mw_c)
+	// 	margin-top: 0
+
+h1,
+h2,
+h3,
+h4
+	font-weight: 400
+h1,
+h2
+	font-size: 34px
+	font-weight: bold
+	text-align: center
+	text-transform: uppercase
+	line-height: 1.2em
+
+	@media (min-width: $mw_c)
+		font-size: 44px
+
+main
+	overflow: hidden
+
+.site-block--content
+
+	h1,
+	h2,
+	h3,
+	h4
+		margin-top: 0.75em
+		margin-bottom: 0.75em
+
+.red
+	color: $red
+
+.container
+	margin: 0 auto
+	padding-left: 10px
+	padding-right: 10px
+
+	@media (min-width: $mw_a)
+
+		width: 440px
+		padding-left: 15px
+		padding-right: 15px
+
+	@media (min-width: $mw_b)
+		width: 660px
+
+	@media (min-width: $mw_c)
+		width: 900px
+
+	@media (min-width: $mw_d)
+		width: 1200px
+
+=clearfix
+	&:after
+		display: block
+		content: ""
+		clear: both
+
+.clearfix
+	+clearfix
+
+.swipe--block
+
+.page-tabs
+	margin-top: 30px
+
+
+.mt-30
+	margin-top: 30px
+
+.mt-20
+	margin-top: 20px
+
+.js__scroll-fixed
+	position: relative
+	// background: green
+	padding-bottom: 30px
+
+.text--center
+	text-align: center
+
+p + p
+	margin-top: 1em
+
+ul
+	margin-top: 0.5em
+
+	li
+		list-style: none
+
+		padding-left: 1em
+		position: relative
+
+		&:before
+			content: ''
+			position: absolute
+			width: 0.5em
+			height: 0.5em
+			background: $gray_3
+			top: 0.55em
+			left: 0
+
+
+.tile
+	border-radius: 3px
+	width: 100%
+	height: 100%
+
+	transition: 0.1s linear
+
+
+	&:hover
+		// transform: scale(1.02, 1.02)
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+
+.button
+	display: inline-block
+	text-decoration: none
+	padding: 10px 22px
+	font-size: 16px
+	text-transform: uppercase
+	font-family: 'PTSans', Serif, Arial
+	text-align: center
+	font-weight: bold
+	cursor: pointer
+	border-radius: 5px
+	// letter-spacing: 0.17em
+
+	@media (min-width: $mw_c)
+		font-size: 20px
+		padding: 13px 22px
+
+.butoon__transparent
+	border: 2px solid transparentize($red, 0.75)
+	color: $red
+	transition: 0.2s linear
+
+	&:hover
+		border: 2px solid transparentize($red, 0)
+
+.button__gold,
+.button__red
+	border: 0
+	// background: $red
+	background: linear-gradient(to bottom, #ff5252 0%,#df3232 100%)
+	color: #fff
+	// transition: 0.2s linear
+
+	&:hover
+		// background: linear-gradient(to bottom, #df3232 0%,#df3232 100%)
+		background: #df3232
+
+// .button__gold
+// 	border: 0
+// 	color: #fff
+// 	background: linear-gradient(to bottom, #f2b910 0%,#d08900 100%)
+
+// 	&:hover
+// 		background: linear-gradient(to bottom, #d08900 0%,#d08900 100%)
+
+
+input
+	&[type='radio'],
+	&[type='checkbox']
+		display: none
+
+		& + label
+			cursor: pointer
+
+
+label.switch
+	display: block
+	// font-size: 0
+	padding-right: 60px
+	position: relative
+	color: #929292
+	max-width: 200px
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: 51px
+		height: 28px
+		border-radius: 24px
+		background: #bdbdbd
+
+	&:before
+		content: ''
+		position: absolute
+		width: 20px
+		height: 20px
+		background: #fff
+		border-radius: 50%
+		top: 4px
+		right: 27px
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2)
+		transition: 0.2s linear
+		z-index: 2
+
+input
+	&[type='radio'],
+	&[type='checkbox']
+
+	&:checked
+		& + label.switch
+			color: $grafit
+			&:after
+				background: $red
+			&:before
+				right: 4px
+
+.spoiler-link
+	display: inline-block
+	color: inherit
+	text-decoration: none
+	padding-left: 15px
+	position: relative
+
+	span
+		border-bottom: 1px dotted $grafit
+
+	&:before
+		content: ''
+		// position: absolute
+		display: inline-block
+		margin-bottom: 0.2em
+		margin-right: 0.5em
+		width: 7px
+		height: 7px
+		// top: 15px
+		// left: -3px
+		border-top: 2px solid #df3b3b
+		border-right: 2px solid #df3b3b
+		transform: rotate(45deg)
+
+.js__spoiler-link
+	cursor: pointer
+
+	&:before
+
+		transition: linear 0.2s
+
+.spoiler-content
+	display: none
+
+.spoiler__open
+
+	&:before
+		transform: rotate(135deg) !important
+
+.arrow-top
+	display: inline-block
+	padding-top: 18px
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		width: 2px
+		height: 13px
+		left: 50%
+		top: -2px
+		margin-left: -1px
+		background: #DF3B3B
+	&:after
+		content: ''
+		position: absolute
+		width: 10px
+		height: 10px
+		left: 50%
+		top: -2px
+		margin-left: -6px
+		border-top: 2px solid #DF3B3B
+		border-left: 2px solid #DF3B3B
+		transform: rotate(45deg)
+
+.spoiler__gray
+
+	position: relative
+
+	&:before
+		content: ''
+		position: absolute
+		width: 5px
+		height: 5px
+		border-right: 0
+		border-top: 0
+		border-right: 2px solid #BDBDBD
+		border-bottom: 2px solid #BDBDBD
+		transform: rotate(45deg)
+		left: none
+		right: -10px
+		top: calc(50% - 4px);
+		transform: rotate(135deg)
+
+	&.spoiler__open
+		&:before
+			transform: rotate(45deg) !important
+
+	@media (min-width: $mw_c)
+
+		&:before
+			right: -14px
+

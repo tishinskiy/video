@@ -1,0 +1,21 @@
+//- include ../mixins/mixins.pug
+doctype html
+html(lang="ru")
+	head
+		title= pageTitle
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="./images/favicon.ico" type="image/x-icon" rel="shortcut icon")
+		link(rel="stylesheet", href="./styles/main.css")
+
+		block styles-link
+	body.stellar-bg(data-stellar-background-ratio="0.5")
+
+		.page-wrap
+
+			block content
+		block footer-block
+
+		script(src="./libs/jquery-3.3.1.min.js")
+		block script
+		script(src="./scripts/script.js")
+		
