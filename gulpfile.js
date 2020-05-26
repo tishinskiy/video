@@ -125,6 +125,13 @@ gulp.task('fonts', function () {
 		.pipe(gulp.dest('./' + dir + '/fonts'))
 });
 
+gulp.task('media', function () {
+	return gulp.src('src/media/**', { since: gulp.lastRun('media') })
+		.pipe(plumber())
+		.pipe(debug({ title: 'media' }))
+		.pipe(gulp.dest('./' + dir + '/media'))
+});
+
 gulp.task('libs', function () {
 	return gulp.src('src/libs/**', { since: gulp.lastRun('libs') })
 		.pipe(plumber())
@@ -138,6 +145,7 @@ gulp.task('watch', function () {
 	gulp.watch('src/templates/**', gulp.series('templates'));
 	gulp.watch('src/images/**', gulp.series('images'));
 	gulp.watch('src/fonts/**', gulp.series('fonts'));
+	gulp.watch('src/media/**', gulp.series('media'));
 	gulp.watch('src/libs/**', gulp.series('libs'));
 });
 
@@ -149,7 +157,7 @@ gulp.task('serve', function () {
 	browserSync.watch(dir + '/**/*.*').on('change', browserSync.reload);
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'templates', 'scripts', 'images', 'fonts', 'libs')));
+gulp.task('build', gulp.series('clean', gulp.parallel('sass', 'templates', 'scripts', 'images', 'fonts', 'media', 'libs')));
 
 gulp.task('dev',
 	gulp.series('build', gulp.parallel('watch', 'serve'))
