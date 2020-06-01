@@ -1,0 +1,41 @@
+extends ./template/_base.pug
+
+append script
+
+	script(src="./libs/jquery-ui.min.js")
+
+append styles-link
+	link(rel="stylesheet", href="./libs/jquery-ui.min.css")
+
+
+append content
+	.row--cam
+		.col.col--video
+			.caption
+				h1 Камера 2
+		.col.col--statistic
+
+			nav.nav.nav--statistic
+				.btn-group
+					a#btn-video.btn-toggle(href="/cam_1.html")
+						img(src='images/svg/camera.svg')
+						span Камера
+					#btn-statistics.btn-toggle.active
+						img(src='images/svg/stat.svg')
+						span Статистика
+	.card-header
+		h3.big-card-heading Нахождения колесной пары на стенде
+		.statistic-date
+			form
+				p
+					input#datepickerStart(type='date' name='dateStart')
+					input#datepickerEnd(type='date' name='dateEnd')
+					|  Группировка по
+					select#groupTypeId(name='groupType')
+						option(value='HOURS') часам
+						option(value='DAYS') дням
+					button.btn-icon-min(type='button')
+						img(src='/images/svg/enter.svg' width='20px' height='20px')
+
+	.statistic__image
+		img(src='images/statistic.png')

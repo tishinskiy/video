@@ -1,14 +1,16 @@
 console.log('VIDEO');
+if (!!window.Playerjs) {
 
-const player = new Playerjs({
-	id:"player6",
-	file:[
-		{
-			"id":"s5",
-			"file":"https://vrk2.ttk.ru:8082/live/stream6/playlist.m3u8"
-		}
-	]
-});
+	const player = new Playerjs({
+		id:"player6",
+		file:[
+			{
+				"id":"s5",
+				"file":"https://vrk2.ttk.ru:8082/live/stream6/playlist.m3u8"
+			}
+		]
+	});
+}
 
 const canvas = document.createElement("canvas", {})
 const video = $('#player6 video')[0]
