@@ -10,153 +10,33 @@ $gray_2: #7F8390
 $gray_3: #4a4a4a
 $gray_4: #bdbdbd
 
-$gray: $gray_1
-
-=fz_n
-	font-size: 1rem
-
-=fz_b
-	font-size: calc(1rem + 6px)
-
-=fz_h
-	font-size: 30px
-
-=fz_s
-	font-size: calc(1rem - 2px)
-
-
-*
-	margin: 0
-	padding: 0
-	box-sizing: border-box
-	outline: none
-
-html
-	height: 100%
-
-.font-family
-	font-family: 'PTSans', Serif, Arial
-
-body
-	height: 100%
-	min-height: 100%
-	font-family: 'PTSans', Serif, Arial
-	font-size: 16px
-	line-height: 1.5
-	color: $grafit
-	background: #fff
-	// padding-top: 50px
-
-	@media (min-width: $mw_c)
-		// padding-top: 0
-		display: flex
-		flex-flow: column nowrap
-		justify-content: space-between
-
-a
-	color: $grafit
-
-	&:hover
-		text-decoration: none
-
-	&[href^='tel']
-		text-decoration: none
-
-.link
-	text-decoration: none
-	border-bottom: 1px dotted currentColor
-	&:hover
-		border-bottom-color: transparent
-.link--dotted
-	border-bottom-style: dotted
-
-.page-wrap
-
-
-h1,
-h2,
-h3,
-h4
-	font-weight: 400
-h1,
-h2
-	font-size: 34px
-	font-weight: bold
+.text--center
 	text-align: center
-	text-transform: uppercase
-	line-height: 1.2em
-
-	@media (min-width: $mw_c)
-		font-size: 44px
-
-main
-	overflow: hidden
-
-.site-block--content
-
-	h1,
-	h2,
-	h3,
-	h4
-		margin-top: 0.75em
-		margin-bottom: 0.75em
-
-.red
-	color: $red
-
-.container
-	margin: 0 auto
-	padding-left: 10px
-	padding-right: 10px
-
-	@media (min-width: $mw_a)
-
-		width: 440px
-		padding-left: 15px
-		padding-right: 15px
-
-	@media (min-width: $mw_b)
-		width: 660px
-
-	@media (min-width: $mw_c)
-		width: 900px
-
-	@media (min-width: $mw_d)
-		width: 1200px
-
-=clearfix
-	&:after
-		display: block
-		content: ""
-		clear: both
-
-.clearfix
-	+clearfix
-
-
-p + p
-	margin-top: 1em
-
-ul
-	margin-top: 0.5em
-
-	li
-		list-style: none
-
-		padding-left: 1em
-		position: relative
-
-		&:before
-			content: ''
-			position: absolute
-			width: 0.5em
-			height: 0.5em
-			background: $gray_3
-			top: 0.55em
-			left: 0
 
 .video
 	font-size: 0
 	width: 100%
 	video
 		width: 100%
+main
+	margin-top: 40px
+
+.tbl-click
+	margin-top: 40px
+	background-color:#fff
+	border: 1px solid #c6c7d2
+	border-collapse: collapse
+
+	thead
+		background-color: #f2f2f2
+
+	td,
+	th
+		// border-collapse: 0
+		border-top: 1px solid #c6c7d2
+		border-bottom: 0
+		border-right: 0
+		border-collapse: collapse
+
+		&:not(:first-child)
+			border-left: 1px solid #c6c7d2

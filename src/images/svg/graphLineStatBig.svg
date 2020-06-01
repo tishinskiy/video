@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="860" height="270" viewBox="0 0 860 270">
+    <defs>
+        <style>.chart-grid, .chart-line {
+            fill: none;
+            }
+
+            .chart-grid {
+            stroke: #e7e8ef;
+            }
+
+            .chart-grid, .chart-line, .chart-point {
+            stroke-miterlimit: 10;
+            }
+
+            .chart-line, .chart-point {
+            stroke: #858892;
+            stroke-width: 2px;
+            }
+
+            .chart-big-fill {
+            fill: url(#chart-big-gradient);
+            }
+
+            .chart-point {
+            fill: #fff;
+            }
+
+            .chart-text {
+            font-size: 12px;
+            fill: #858892;
+            font-family: PTSans-Regular, PT Sans;
+            }</style>
+        <linearGradient id="chart-big-gradient" x1="431.36" y1="250" x2="431.36" y2="28.48" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#858892" stop-opacity="0"/>
+            <stop offset="1" stop-color="#858892" stop-opacity="0.6"/>
+        </linearGradient>
+    </defs>
+    <line class="chart-grid" x1="21.86" x2="21.86" y2="250"/>
+    <line class="chart-grid" x1="60.86" x2="60.86" y2="250"/>
+    <line class="chart-grid" x1="99.86" x2="99.86" y2="250"/>
+    <line class="chart-grid" x1="138.86" x2="138.86" y2="250"/>
+    <line class="chart-grid" x1="177.86" x2="177.86" y2="250"/>
+    <line class="chart-grid" x1="216.86" x2="216.86" y2="250"/>
+    <line class="chart-grid" x1="255.86" x2="255.86" y2="250"/>
+    <line class="chart-grid" x1="294.86" x2="294.86" y2="250"/>
+    <line class="chart-grid" x1="333.86" x2="333.86" y2="250"/>
+    <line class="chart-grid" x1="372.86" x2="372.86" y2="250"/>
+    <line class="chart-grid" x1="411.86" x2="411.86" y2="250"/>
+    <line class="chart-grid" x1="450.86" x2="450.86" y2="250"/>
+    <line class="chart-grid" x1="489.86" x2="489.86" y2="250"/>
+    <line class="chart-grid" x1="528.86" x2="528.86" y2="250"/>
+    <line class="chart-grid" x1="567.86" x2="567.86" y2="250"/>
+    <line class="chart-grid" x1="606.86" x2="606.86" y2="250"/>
+    <line class="chart-grid" x1="645.86" x2="645.86" y2="250"/>
+    <line class="chart-grid" x1="684.86" x2="684.86" y2="250"/>
+    <line class="chart-grid" x1="723.86" x2="723.86" y2="250"/>
+    <line class="chart-grid" x1="762.86" x2="762.86" y2="250"/>
+    <line class="chart-grid" x1="801.86" x2="801.86" y2="250"/>
+    <line class="chart-grid" x1="840.86" x2="840.86" y2="250"/>
+    <polyline class="chart-line"
+              points="21.86 233.22 60.86 233.22 99.86 191.22 138.86 191.22 177.86 137.22 216.86 154.22 255.86 138.22 294.86 138.25 333.86 113.32 372.86 126.36 411.86 98.43 450.86 28.48 489.86 156.54 528.86 123.6 567.86 146.64 606.86 205.71 645.86 114.75 684.86 150.79 723.86 78.88 762.86 70.93 801.86 119.95 840.86 104.22"/>
+    <polygon class="chart-big-fill"
+             points="21.86 233.22 60.86 233.22 99.86 191.22 138.86 191.22 177.86 137.22 216.86 154.22 255.86 138.22 294.86 138.25 333.86 113.32 372.86 126.36 411.86 98.43 450.86 28.48 489.86 156.54 528.86 123.6 567.86 146.64 606.86 205.71 645.86 114.75 684.86 150.79 723.86 78.88 762.86 70.93 801.86 119.95 840.86 104.22 840.86 250 21.86 250 21.86 233.22"/>
+    <circle class="chart-value chart-point" cx="21.86" cy="233.22" r="3"/>
+    <circle class="chart-value chart-point" cx="60.86" cy="233.22" r="3"/>
+    <circle class="chart-value chart-point" cx="99.86" cy="191.22" r="3"/>
+    <circle class="chart-value chart-point" cx="138.86" cy="191.22" r="3"/>
+    <circle class="chart-value chart-point" cx="177.86" cy="137.22" r="3"/>
+    <circle class="chart-value chart-point" cx="216.86" cy="154.22" r="3"/>
+    <circle class="chart-value chart-point" cx="255.86" cy="138.22" r="3"/>
+    <circle class="chart-value chart-point" cx="294.86" cy="138.25" r="3"/>
+    <circle class="chart-value chart-point" cx="333.86" cy="113.32" r="3"/>
+    <circle class="chart-value chart-point" cx="372.86" cy="126.36" r="3"/>
+    <circle class="chart-value chart-point" cx="411.86" cy="98.43" r="3"/>
+    <circle class="chart-value chart-point" cx="450.86" cy="28.48" r="3"/>
+    <circle class="chart-value chart-point" cx="489.86" cy="156.54" r="3"/>
+    <circle class="chart-value chart-point" cx="528.86" cy="123.6" r="3"/>
+    <circle class="chart-value chart-point" cx="567.86" cy="146.64" r="3"/>
+    <circle class="chart-value chart-point" cx="606.86" cy="205.71" r="3"/>
+    <circle class="chart-value chart-point" cx="645.86" cy="114.75" r="3"/>
+    <circle class="chart-value chart-point" cx="684.86" cy="150.79" r="3"/>
+    <circle class="chart-value chart-point" cx="723.86" cy="78.88" r="3"/>
+    <circle class="chart-value chart-point" cx="762.86" cy="70.93" r="3"/>
+    <circle class="chart-value chart-point" cx="801.86" cy="119.95" r="3"/>
+    <circle class="chart-value chart-point" cx="840.86" cy="104.22" r="3"/>
+    <text class="chart-text" transform="translate(7.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(46.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(85.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(124.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(163.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(202.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(241.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(280.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(319.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(358.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(397.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(436.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(475.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(514.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(553.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(592.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(631.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(670.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(709.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(748.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(787.47 265.75)">15:25</text>
+    <text class="chart-text" transform="translate(826.47 265.75)">15:25</text>
+</svg>

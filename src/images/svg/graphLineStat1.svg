@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240" height="140"
+     viewBox="0 0 240 140">
+    <defs>
+        <style>.chart-grid, .chart-line {
+            fill: none;
+            }
+
+            .chart-grid {
+            stroke: #e7e8ef;
+            }
+
+            .chart-grid, .chart-line, .chart-point {
+            stroke-miterlimit: 10;
+            }
+
+            .chart-line, .chart-point {
+            stroke: #858892;
+            stroke-width: 2px;
+            }
+
+            .chart-small-fill {
+            fill: url(#chart-small-gradient);
+            }
+
+            .chart-point {
+            fill: #fff;
+            }
+
+            .chart-text {
+            font-size: 12px;
+            fill: #858892;
+            font-family: PTSans-Regular, PT Sans;
+            }
+        </style>
+        <linearGradient id="chart-small-gradient" x1="119.36" y1="120" x2="119.36" y2="18.42" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#858892" stop-opacity="0"/>
+            <stop offset="1" stop-color="#858892" stop-opacity="0.6"/>
+        </linearGradient>
+    </defs>
+    <line class="chart-grid" x1="21.86" x2="21.86" y2="120"/>
+    <line class="chart-grid" x1="60.86" x2="60.86" y2="120"/>
+    <line class="chart-grid" x1="99.86" x2="99.86" y2="120"/>
+    <line class="chart-grid" x1="138.86" x2="138.86" y2="120"/>
+    <line class="chart-grid" x1="177.86" x2="177.86" y2="120"/>
+    <line class="chart-grid" x1="216.86" y1="120" x2="216.86"/>
+    <polyline class="chart-line" points="21.86 103.25 60.86 103.25 99.86 72.25 138.86 72.25 177.86 18.25 216.86 33.25"/>
+    <polygon class="chart-small-fill"
+             points="21.86 103.42 60.86 103.42 99.86 72.42 138.86 72.42 177.86 18.42 216.86 33.42 216.86 120 21.86 120 21.86 103.42"/>
+    <circle class="chart-value chart-point" cx="21.86" cy="103.25" r="3"/>
+    <circle class="chart-value chart-point" cx="60.86" cy="103.25" r="3"/>
+    <circle class="chart-value chart-point" cx="99.86" cy="72.28" r="3"/>
+    <circle class="chart-value chart-point" cx="138.86" cy="72.26" r="3"/>
+    <circle class="chart-value chart-point" cx="177.86" cy="18.25" r="3"/>
+    <circle class="chart-value chart-point" cx="216.86" cy="33.43" r="3"/>
+    <text class="chart-text" transform="translate(7.47 135.75)">15:25</text>
+    <text class="chart-text" transform="translate(46.47 135.75)">15:30</text>
+    <text class="chart-text" transform="translate(85.47 135.75)">15:35</text>
+    <text class="chart-text" transform="translate(124.47 135.75)">15:40</text>
+    <text class="chart-text" transform="translate(163.47 135.75)">15:45</text>
+    <text class="chart-text" transform="translate(202.47 135.75)">15:50</text>
+</svg>

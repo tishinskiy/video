@@ -51,8 +51,9 @@ const draw = () => {
 
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+
+$(document).ready(function(){
+	if (!$('[id ^= "player"]').length) return false
 	setInterval(draw, Math.floor(1 / 30))
 })
-
 

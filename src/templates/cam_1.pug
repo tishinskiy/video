@@ -1,0 +1,14 @@
+extends ./template/_base.pug
+
+append script
+	script(src="https://vrk1.ttk.ru/cam/playerjs-10.23.js?v1")
+	//- script(src="./libs/jquery.stellar.min.js")
+
+append styles-link
+	//- link(rel="stylesheet", href="./libs/slick.css")
+
+
+append content
+	.row--cam
+	h1 Камера 2
+	.video#player6

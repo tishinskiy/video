@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="170" height="170"
+     viewBox="0 0 170 170">
+    <defs>
+        <style>.gauge-scale {
+            fill: #e8eaef;
+            }
+
+            .gauge-scale, .gauge-arrow {
+            fill-rule: evenodd;
+            }
+
+            .gauge-arrow, .gauge-text {
+            fill: #858892;
+            }
+
+            .gauge-text {
+            font-size: 12px;
+            font-family: PTSans-Regular, PT Sans;
+            }
+
+            .gauge-path-gradient {
+            fill: url(#gauge-gradient);
+            }</style>
+        <linearGradient id="gauge-gradient" y1="58.74" x2="170" y2="58.74" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#77b246"/>
+            <stop offset="0.42" stop-color="#d9ae2b"/>
+            <stop offset="0.6" stop-color="#d9ae2b"/>
+            <stop offset="1" stop-color="#df3b3a"/>
+        </linearGradient>
+        <mask id="mask-1">
+            <path xmlns="http://www.w3.org/2000/svg" class="gauge-scale"
+                  d="M85,0A85,85,0,0,0,4.59,112.54a6.23,6.23,0,0,0,12.32-1.28,6.15,6.15,0,0,0-.3-1.83l.07,0a72.53,72.53,0,1,1,136.61,0l.11,0a5.87,5.87,0,0,0-.31,1.84,6.23,6.23,0,0,0,12.33,1.24A85,85,0,0,0,85,0Z"
+                  transform="rotate(-65 85 85)"/>
+        </mask>
+    </defs>
+    <path class="gauge-scale"
+          d="M85,0A85,85,0,0,0,4.59,112.54a6.23,6.23,0,0,0,12.32-1.28,6.15,6.15,0,0,0-.3-1.83l.07,0a72.53,72.53,0,1,1,136.61,0l.11,0a5.87,5.87,0,0,0-.31,1.84,6.23,6.23,0,0,0,12.33,1.24A85,85,0,0,0,85,0Z"/>
+    <path class="gauge-arrow" d="M85,35.05,80,85a5,5,0,1,0,10,0Z" transform="rotate(45 85 85)"/>
+    <text class="gauge-text" transform="translate(2.5 132.85)">Мало</text>
+    <text class="gauge-text" transform="translate(133.98 132.85)">Много</text>
+    <path class="gauge-path-gradient"
+          d="M85,0A85,85,0,0,0,4.59,112.54a6.23,6.23,0,0,0,12.32-1.28,6.15,6.15,0,0,0-.3-1.83l.07,0a72.53,72.53,0,1,1,136.61,0l.11,0a5.87,5.87,0,0,0-.31,1.84,6.23,6.23,0,0,0,12.33,1.24A85,85,0,0,0,85,0Z"
+          mask='url(#mask-1)'/>
+</svg>
