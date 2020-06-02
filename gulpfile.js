@@ -163,26 +163,6 @@ gulp.task('dev',
 	gulp.series('build', gulp.parallel('watch', 'serve'))
 );
 
-gulp.task('vers', function (done) {
-
-	const now = new Date().getTime()
-	const fs = require('fs');
-	const file = './src/templates/mixins/version.pug'
-
-	fs.stat( file , err => {
-		console.log('------------------------------')
-		console.log(err)
-
-			fs.writeFile( file, "- var version = '?v=" + now + "'", function (err, result) {
-				if (err) console.log('error', err);
-			});
-
-		console.log('------------------------------')
-	})
-
-	done()
-});
-
 gulp.task('production',
-	gulp.series('vers', 'build')
+	gulp.series('build')
 );
