@@ -1,34 +1,24 @@
 console.log('VIDEO');
-if (!!window.Playerjs) {
 
-	const player = new Playerjs({
-		id:"player6",
-		file:[
-			{
-				"id":"s5",
-				"file":"https://vrk2.ttk.ru:8082/live/stream6/playlist.m3u8"
-			}
-		]
-	});
-}
 
-const canvas = document.createElement("canvas", {})
-const video = $('#player6 video')[0]
-const ctx = canvas.getContext("2d");
-
-$(video).after(canvas)
 
 // const
 
+let canvas = undefined
 
-const draw = () => {
+const draw = (video) => {
+
 	if(video.paused || video.ended) return false;
+	if (typeof canvas === 'undefined') {
+
+		canvas = document.createElement("canvas", {})
+		$(video).after(canvas)
+	}
+	const ctx = canvas.getContext("2d");
+
 
 
 	const cor = $('#player6')[0].clientHeight / $('#player6')[0].clientWidth //0.5
-
-	// console.log(video.clientHeight / video.clientWidth < cor)
-
 	const width = video.clientHeight / video.clientWidth > cor ? video.clientWidth : video.clientHeight / cor ;
 	const height = width * cor;
 
@@ -55,7 +45,27 @@ const draw = () => {
 
 
 $(document).ready(function(){
-	if (!$('[id ^= "player"]').length) return false
-	setInterval(draw, Math.floor(1 / 30))
+
+	if (!!window.Playerjs && $('[id ^= "player"]').length) {
+
+		$('[id ^= "player"]').each(function(i, item){
+
+			new Playerjs({
+				id:"player6",
+				file:[
+					{
+						"id": item.id,
+						"file": item.dataset.url
+					}
+				]
+			});
+
+			if (item.dataset.mask != 0) {
+
+				setInterval(function(){draw($(item).find('video')[0])}, Math.floor(1 / 30))
+			}
+		})
+	}
+
 })
 

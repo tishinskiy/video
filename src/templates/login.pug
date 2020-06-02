@@ -1,0 +1,32 @@
+//- include ../mixins/mixins.pug
+doctype html
+html(lang="ru")
+	head
+		title= pageTitle
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(href="./images/favicon.ico" type="image/x-icon" rel="shortcut icon")
+		link(rel="stylesheet", href="./styles/main.css")
+
+		block styles-link
+	body
+
+
+		.container.v-center
+			.card
+				.header
+					img.logo(src='images/logo.svg' alt='')
+					h1.main-heading Демонстрация возможностей видеоаналитики<br>для мониторинга и контроля бизнес-процессов РЖД
+				.entry
+					h2.page-heading Вход
+					div(name='login')
+						.form-group
+							label Логин
+							input#login.form-field(type='text' autocomplete='off')
+						.form-group
+							label Пароль
+							input#password.form-field(type='password')
+							p.help-block Если вы забыли пароль, нажмите 
+								a(href='#') сюда
+						button#btn_login.btn-success Войти
+		script(src="./libs/jquery-3.3.1.min.js")
+		script(src="./scripts/script.js")
