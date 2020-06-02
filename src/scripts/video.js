@@ -6,7 +6,7 @@ console.log('VIDEO');
 
 let canvas = undefined
 
-const draw = (video) => {
+const draw = (video, player) => {
 
 	if(video.paused || video.ended) return false;
 	if (typeof canvas === 'undefined') {
@@ -18,7 +18,7 @@ const draw = (video) => {
 
 
 
-	const cor = $('#player6')[0].clientHeight / $('#player6')[0].clientWidth //0.5
+	const cor = player.clientHeight / player.clientWidth //0.5
 	const width = video.clientHeight / video.clientWidth > cor ? video.clientWidth : video.clientHeight / cor ;
 	const height = width * cor;
 
@@ -51,7 +51,7 @@ $(document).ready(function(){
 		$('[id ^= "player"]').each(function(i, item){
 
 			new Playerjs({
-				id:"player6",
+				id:item.id,
 				file:[
 					{
 						"id": item.id,
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
 			if (item.dataset.mask != 0) {
 
-				setInterval(function(){draw($(item).find('video')[0])}, Math.floor(1 / 30))
+				setInterval(function(){draw($(item).find('video')[0], item)}, Math.floor(1 / 30))
 			}
 		})
 	}

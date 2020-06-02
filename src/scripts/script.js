@@ -24,7 +24,7 @@ $(document).ready(function(){
 	    }
 	});
 })
-$('[data-url]').click(function() {
+$('tr[data-url]').click(function() {
 	window.location = `${window.location.origin}/${$(this).data('url')}`
 	console.log($(this).data('url'))
 })
