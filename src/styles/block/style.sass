@@ -54,15 +54,25 @@ main
 		&:not(:first-child)
 			border-left: 1px solid #c6c7d2
 
+	td
+		img
+			max-height: 20px
+
 .row--cam
-	display: flex
 	width: 100%
 	margin-top: 30px
+
+	@media (min-width: 960px)
+		display: flex
+
 .col--video
 
 	flex-grow: 2
 .col--statistic
-	margin-left: 20px
+	margin-top: 30px
+	@media (min-width: 960px)
+		margin-top: 0px
+		margin-left: 20px
 .table--statistic
 
 .statistic__image
