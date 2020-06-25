@@ -1,0 +1,88 @@
+extends ./template/_base.pug
+
+append script
+
+append styles-link
+
+append content
+	.accordeon
+		.accordeon__block
+			.accordeon__caption 
+				h3 Центр 
+			.accordeon__body(style="display:none")
+				a(href='javascript:;').region
+					span.region__name ВЧДр Брянск-Льговский
+					span.region__address г. Брянск, ул 2-я Аллея
+				a(href='javascript:;').region
+					span.region__name ВЧДр Воскресенск
+					span.region__address Московская обл, г. Воскресенск, ул Фабричная, д 1
+				a(href='javascript:;').region
+					span.region__name ВЧДр Люблино
+					span.region__address г. Москва, Деповский тупик, д 2, ВЧДр Люблино
+				a(href='javascript:;').region
+					span.region__name ВЧДр Пенза
+					span.region__address Саратовская обл, г. Ртищево, ул Мостовая, ВУ Ртищево
+				a(href='javascript:;').region
+					span.region__name ВЧДр Поворино
+					span.region__address Воронежская обл, г. Поворино, ул Пролетарская, д 1Б
+				a(href='javascript:;').region
+					span.region__name ВЧДр Рыбное
+					span.region__address Рязанская обл, г. Рыбное, ул Мира
+				a(href='javascript:;').region
+					span.region__name ВЧДр Стойленская
+					span.region__address Белгородская обл, г. Старый Оскол, пер Мира, д 14А
+				a(href='javascript:;').region
+					span.region__name Московское представительство
+					span.region__address г. Москва, Деповский тупик, д 2
+				a(href='javascript:;').region
+					span.region__name Центральный аппарат АО «ВРК-1»
+					span.region__address г. Москва, ул Макаренко, д 3 стр 1
+				a(href='javascript:;').region
+					span.region__name Центральный аппарат АО «ВРК-1»
+					span.region__address г. Москва, Хибинский проезд
+
+		.accordeon__block
+			.accordeon__caption.accordeon__caption--open
+				h3 Север
+			.accordeon__body(style="display:block")
+				a(href='javascript:;').region.region--active
+					span.region__name ВКМ Новосокольники
+					span.region__address Псковская обл, г. Новосокольники
+				a(href='javascript:;').region
+					span.region__name ВРК-1, Усть-Луга
+					span.region__address Ленинградская обл, Кингисеппский р-н, снт Усть-Луга, д 12 к 10, кв 15Г
+				a(href='javascript:;').region
+					span.region__name ВЧДр Вологда
+					span.region__address г. Вологда, Движенческий пер, д 12
+				a(href='javascript:;').region
+					span.region__name ВЧДр Кандалакша
+					span.region__address Мурманская обл, г. Кандалакша, ул Кировская, д 16
+				a(href='javascript:;').region
+					span.region__name ВЧДр Петрозаводск
+					span.region__address г. Петрозаводск, р-н Первомайский, ул Шотмана, д 17
+				a(href='javascript:;').region
+					span.region__name ВЧДр Псков
+					span.region__address г. Псков, ул Дновская, д 1
+				a(href='javascript:;').region
+					span.region__name ВЧДр Санкт-Петербург Московский
+					span.region__address г. Санкт-Петербург, ст Фарфоровская
+				a(href='javascript:;').region
+					span.region__name ВЧДр Сольвычегодск
+					span.region__address Архангельская обл, г. Котлас, рп Вычегодский, ул Привокзальная, д 160
+				a(href='javascript:;').region
+					span.region__name ВЧДр Тосно
+					span.region__address Ленинградская обл, г. Тосно
+				a(href='javascript:;').region
+					span.region__name Санкт-Петербургский филиал
+					span.region__address г. Санкт-Петербург, ул Минеральная, д 37
+
+		.accordeon__block
+			.accordeon__caption 
+				h3 Кавказ 
+			.accordeon__body(style="display:none")
+				a(href='javascript:;').region.region--disabled
+					span.region__name ВЧДр Батайск
+					span.region__address Ростовская обл, г. Батайск, ул Промышленная, д 8А
+				a(href='javascript:;').region.region--disabled
+					span.region__name ВЧДр Краснодар
+					span.region__address г. Краснодар, ул Ставропольская, д 47

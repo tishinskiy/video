@@ -1,0 +1,68 @@
+.accordeon__block
+	border: 1px solid #ccc
+
+	&:not(:first-child) 
+		margin-top: 5px
+
+.accordeon__caption 
+	padding: 10px 15px 10px 40px
+	background: #fff
+	position: relative
+
+	&::before
+		content: ''
+		position: absolute
+		width: 10px
+		height: 10px
+		border-top: 2px solid #333
+		border-right: 2px solid #333
+		left: 12px
+		top: 18px
+		transform: rotate(45deg)
+	h3
+		font-size: 24px
+		font-weight: normal
+	&.accordeon__caption--open,
+	&:hover
+		background: #DF3B3B
+		color: #fff
+		cursor: pointer
+
+		&::before
+			border-color: #fff
+	&.accordeon__caption--open
+		&::before
+			transform: rotate(135deg)
+
+.accordeon__body
+	// display: none
+
+.region
+	display: block
+	background: #fff
+	padding: 10px 15px
+	transition: 0.15s linear
+	border-top: 1px solid #ccc
+	// & + .region
+
+	&:not(.region--disabled)
+		&:hover
+			background: #eee
+
+.region--active
+	.region__name
+		color: #DF3B3B
+.region--disabled
+	cursor: no-drop
+	.region__name
+		color: #999
+
+.region__name,
+.region__address
+	display: block
+
+.region__name
+	font-size: 18px
+.region__address
+	font-size: 14px
+	color: #999

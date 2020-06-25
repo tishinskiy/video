@@ -4,10 +4,6 @@ import './video.js'
 
 $(document).ready(function(){
 	console.log('READY')
-	// $( function() {
-	//     $( "#datepickerStart, #datepickerEnd" ).datepicker();
-	//   } );
-	// $.datepicker.formatDate( "dd.mm.yyyy" );
 
 	$(".form-field").focus(function () {
 
@@ -23,6 +19,25 @@ $(document).ready(function(){
 	        $(this).parent().removeClass("with-value");
 	    }
 	});
+
+
+	$('.accordeon__caption').on('click', function() {
+
+		const items = $('.accordeon__caption')
+
+		for (let i = 0; i < items.length; i++) {
+
+			if(this === items[i]) {
+				$(items[i]).addClass('accordeon__caption--open')
+				$(items[i]).next('.accordeon__body').slideDown('fast')
+
+			} else {
+				$(items[i]).removeClass('accordeon__caption--open')
+				$(items[i]).next('.accordeon__body').slideUp('fast')
+			}
+		}
+	})
+
 })
 $('tr[data-url]').click(function() {
 	window.location = `${window.location.origin}/${$(this).data('url')}`
