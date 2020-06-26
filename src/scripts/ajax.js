@@ -15,25 +15,51 @@ const secondToTime = sec => {
 	return mm+':'+ss
 }
 
+const dd = {}
+
 $(document).ready(() => {
 
 	const check = () => {
 
-		if (!$('[data-row]').length) return false
-		const firstRow = $('[data-row]').eq(0)
-
 		$.get('https://vrk1.ttk.ru/rest/v1/last-event')
 		.done(function(data) {
 
-			const arr = data.filter(item => {
-				return +item.id >= +firstRow.data('row')
+			const test = data.map(item => {
+				const date = new Date(item.date_from)
+				return {
+					...item,
+					_id: date.getTime()/1000
+				}
 			})
+
+			if (test.length) {
+
+				for (let i = 0; i < test.length; i++) {
+
+					const item = test[i]
+					dd[item._id] = item
+				}
+			}
+
+			const _arr = []
+
+			for (k in dd) {
+				_arr.push(dd[k])
+			}
+
+			const arr = _arr.sort(function(a, b){
+				return b._id - a._id;
+			})
+
+			const content = $('<div>')
 
 			if (!arr.length) return false
 
 			arr.forEach(item => {
 				timeToGud(item.date_from)
-				const img = $('<img>')
+				const img = $('<img>', {
+					style: 'width: 18px;'
+				})
 
 				if (item.status === 'ok') img.attr('src', 'images/svg/ok.svg')
 
@@ -42,7 +68,7 @@ $(document).ready(() => {
 
 				const row = $('<tr>', {
 					class: 'js__stat-row',
-					'data-row': item.id
+					'data-row': item._id
 				}).append(
 					$('<td>', {
 						html: timeToGud(item.date_from)
@@ -59,10 +85,10 @@ $(document).ready(() => {
 					}).append(img),
 				)
 
-				row.insertBefore(firstRow)
+				content.append(row)
 			})
 
-			firstRow.remove()
+			$('.js__statis-body').html(content.html())
 
 			if ($('.static-table__wrap').innerHeight() > 500) {
 				
@@ -80,7 +106,7 @@ $(document).ready(() => {
 		});
 
 
+		setTimeout(check, 1e4)
 	}
-
-	setInterval(check, 1e4)
+	check()
 })
