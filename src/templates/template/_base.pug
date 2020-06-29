@@ -14,6 +14,13 @@ html(lang="ru")
 			include ../block/header.pug
 			main
 				.container.container--main
+					.bread-crumbs
+						a(href='javascript:;') Главная
+						|  \  
+						a(href='javascript:;') Сраница раздела
+						|  \  
+						| Текущая страница
+
 					block content
 		block footer-block
 
