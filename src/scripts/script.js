@@ -23,6 +23,12 @@ $(document).ready(function(){
 
 	$('.accordeon__caption').on('click', function() {
 
+		if ($(this).hasClass('accordeon__caption--open')) {
+			$(this).removeClass('accordeon__caption--open')
+			$(this).next('.accordeon__body').slideUp('fast')
+			return false
+		}
+
 		const items = $('.accordeon__caption')
 
 		for (let i = 0; i < items.length; i++) {
