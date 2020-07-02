@@ -19,9 +19,18 @@ const dd = {}
 
 $(document).ready(() => {
 
-	const check = () => {
+	const camId = $('.js__statis-body').attr('data-camera')
+		'dataUrl', camId
 
-		$.get('https://vrk1.ttk.ru/rest/v1/last-event')
+
+
+	const check = () => {
+		if (!camId) {
+			console.log('NOT FIND CAMERA ID');
+			return false
+		}
+
+		$.get(`https://vrk1.ttk.ru/rest/v1/last-event?camera_code=${camId}`)
 		.done(function(data) {
 
 			const test = data.map(item => {
