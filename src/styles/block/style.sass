@@ -105,3 +105,36 @@ main
 		border-bottom: 1px solid currentColor
 		&:hover
 			color: #DF3B3B
+
+
+.btn
+	padding: 5px 10px
+	min-height: 33px
+	border-radius: 5px
+	border-width: 1px
+	cursor: pointer
+
+.desc,
+.asc
+	display: block
+	padding-left: 15px
+	position: relative
+
+	&::before
+		content: ''
+		position: absolute
+		width: 0
+		height: 0
+		top: 3px
+		left: 0px
+
+.asc
+	&::before
+		border-top: 7px solid #000
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
+.desc
+	&::before
+		border-bottom: 7px solid #000
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
