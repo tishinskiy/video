@@ -46,10 +46,9 @@ $(document).ready(() => {
 				for (let i = 0; i < test.length; i++) {
 
 					const item = test[i]
-					dd[item._id] = item
+					dd[item.id] = item
 				}
 			}
-
 			const _arr = []
 
 			for (k in dd) {
@@ -57,7 +56,7 @@ $(document).ready(() => {
 			}
 
 			const arr = _arr.sort(function(a, b){
-				return b._id - a._id;
+				return b.id - a.id;
 			})
 
 			const content = $('<div>')
@@ -100,7 +99,7 @@ $(document).ready(() => {
 			$('.js__statis-body').html(content.html())
 
 			if ($('.static-table__wrap').innerHeight() > 500) {
-				
+
 				$('.static-table__wrap').css({
 					height: '500px',
 					'overflow-y': 'scroll'
