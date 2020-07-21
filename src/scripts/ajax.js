@@ -20,9 +20,7 @@ const dd = {}
 $(document).ready(() => {
 
 	const camId = $('.js__statis-body').attr('data-camera')
-		'dataUrl', camId
-
-
+	const target = $('.js__statis-body').attr('target')
 
 	const check = () => {
 		if (!camId) {
@@ -76,7 +74,8 @@ $(document).ready(() => {
 
 				const row = $('<tr>', {
 					class: 'js__stat-row',
-					'data-row': item.date_from
+					'data-row': item.date_from,
+					'target': '_blank'
 				}).append(
 					$('<td>', {
 						html: timeToGud(item.date_from)
@@ -122,6 +121,6 @@ $(document).ready(() => {
 
 		const url = `http://80.237.17.101/account/camera/12/view.html?time=${$(this).attr('data-row')}&backPage=1`
 
-		window.open(url, 'example', 'width=auto,height=600px');
+		window.open(url, 'example', target === '_blank' ? '' : 'width=auto,height=600px');
 	})
 })
