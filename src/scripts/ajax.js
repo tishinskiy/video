@@ -76,7 +76,7 @@ $(document).ready(() => {
 
 				const row = $('<tr>', {
 					class: 'js__stat-row',
-					'data-row': item._id
+					'data-row': item.date_from
 				}).append(
 					$('<td>', {
 						html: timeToGud(item.date_from)
@@ -117,4 +117,11 @@ $(document).ready(() => {
 		setTimeout(check, 1e4)
 	}
 	check()
+
+	$('body').on('click', '.js__stat-row', function(){
+
+		const url = `http://80.237.17.101/account/camera/12/view.html?time=${$(this).attr('data-row')}&backPage=1`
+
+		window.open(url, 'example', 'width=auto,height=600px');
+	})
 })
