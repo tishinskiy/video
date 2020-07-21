@@ -20,6 +20,7 @@ const dd = {}
 $(document).ready(() => {
 
 	const camId = $('.js__statis-body').attr('data-camera')
+	const fort = $('.js__statis-body').attr('data-fort')
 	const target = $('.js__statis-body').attr('target')
 
 	const check = () => {
@@ -111,15 +112,14 @@ $(document).ready(() => {
 		.always(function() {
 			// console.log( "finished" );
 		});
-
-
 		setTimeout(check, 1e4)
 	}
+
 	check()
 
 	$('body').on('click', '.js__stat-row', function(){
 
-		const url = `http://80.237.17.101/account/camera/12/view.html?time=${$(this).attr('data-row')}&backPage=1`
+		const url = `http://80.237.17.101/account/camera/${fort? fort: '10'}/view.html?time=${$(this).attr('data-row')}&backPage=1`
 
 		window.open(url, 'example', target === '_blank' ? '' : 'width=auto,height=600px');
 	})
