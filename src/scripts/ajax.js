@@ -68,9 +68,9 @@ $(document).ready(() => {
 					style: 'width: 18px;'
 				})
 
-				if (item.status === 'ok') img.attr('src', 'images/svg/ok.svg')
+				if (item.status === 'ok') img.attr('src', '/images/svg/ok.svg')
 
-				if (item.status === 'error') img.attr('src', 'images/svg/warn.svg')
+				if (item.status === 'error') img.attr('src', '/images/svg/warn.svg')
 
 
 				const row = $('<tr>', {
@@ -119,8 +119,8 @@ $(document).ready(() => {
 
 	$('body').on('click', '.js__stat-row', function(){
 
-		const url = `http://80.237.17.101/account/camera/${fort? fort: '10'}/view.html?time=${$(this).attr('data-row')}&backPage=1`
+		const url = `https://vrk1.ttk.ru/site/default/video-archive?camera=${fort? fort: '10'}&time=${$(this).attr('data-row')}&backPage=1`
 
-		window.open(url, 'example', target === '_blank' ? '' : 'width=auto,height=600px');
+		window.open(url, 'example', target !== '_blank' ? '' : 'width=auto,height=600px');
 	})
 })
