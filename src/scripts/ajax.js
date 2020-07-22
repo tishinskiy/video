@@ -76,7 +76,7 @@ $(document).ready(() => {
 				const row = $('<tr>', {
 					class: 'js__stat-row',
 					'data-row': item.date_from,
-					'target': '_blank'
+					// 'target': '_blank'
 				}).append(
 					$('<td>', {
 						html: timeToGud(item.date_from)
@@ -121,6 +121,6 @@ $(document).ready(() => {
 
 		const url = `https://vrk1.ttk.ru/site/default/video-archive?camera=${fort? fort: '10'}&time=${$(this).attr('data-row')}&backPage=1`
 
-		window.open(url, 'example', target !== '_blank' ? '' : 'width=auto,height=600px');
+		window.open(url, 'example', target === '_blank' ? '' : 'width=auto,height=600px');
 	})
 })
