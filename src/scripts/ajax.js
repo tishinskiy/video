@@ -20,7 +20,7 @@ const dd = {}
 $(document).ready(() => {
 
 	const camId = $('.js__statis-body').attr('data-camera')
-	const fort = $('.js__statis-body').attr('data-fort')
+	const fort = $('[data-fort]').attr('data-fort')
 	const target = $('.js__statis-body').attr('target')
 
 	const check = () => {
@@ -121,6 +121,6 @@ $(document).ready(() => {
 
 		const url = `https://vrk1.ttk.ru/site/default/video-archive?camera=${fort? fort: '10'}&time=${$(this).attr('data-row')}&backPage=1`
 
-		window.open(url, 'example', target === '_blank' ? '' : 'width=auto,height=600px');
+		window.open(url, 'example', target === '_blank' ? '' : 'width=1024px,height=768px');
 	})
 })
