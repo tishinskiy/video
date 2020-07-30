@@ -44,6 +44,16 @@ $(document).ready(function(){
 		}
 	})
 
+	const fort = $('[data-fort]').attr('data-fort')
+	const target = $('.js__statis-body').attr('target')
+
+	$('body').on('click', '.js__stat-row', function(){
+
+		const url = `https://vrk1.ttk.ru/site/default/video-archive?camera=${fort? fort: '10'}&time=${$(this).attr('data-row')}&backPage=1`
+
+		window.open(url, 'example', (!!target && target === '_blank') ? '' : 'width=1024px,height=768px');
+	})
+
 })
 $('tr[data-url]').click(function() {
 	window.location = `${window.location.origin}/${$(this).data('url')}`
