@@ -80,7 +80,7 @@ $(document).ready(() => {
 						html: timeToGud(item.date_from)
 					}),
 					$('<td>', {
-						'html': timeToGud(item.date_to)
+						'html': item.date_to? timeToGud(item.date_to) : '-'
 					}),
 					$('<td>', {
 						class: 'text--right',
