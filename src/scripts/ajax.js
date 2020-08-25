@@ -62,14 +62,16 @@ $(document).ready(() => {
 
 			arr.forEach(item => {
 				timeToGud(item.date_from)
-				const img = $('<img>', {
-					style: 'width: 18px;'
-				})
 
-				if (item.status === 'ok') img.attr('src', '/images/svg/ok.svg')
+                let img = '--';
+                if (item.status) {
+                    img = $('<img>', {
+                        style: 'width: 18px;'
+                    });
 
-				if (item.status === 'error') img.attr('src', '/images/svg/warn.svg')
-
+                    if (item.status === 'ok') img.attr('src', '/images/svg/ok.svg')
+                    if (item.status === 'error') img.attr('src', '/images/svg/warn.svg')
+                }
 
 				const row = $('<tr>', {
 					class: 'js__stat-row',
@@ -80,11 +82,11 @@ $(document).ready(() => {
 						html: timeToGud(item.date_from)
 					}),
 					$('<td>', {
-						'html': item.date_to? timeToGud(item.date_to) : '-'
+						'html': item.date_to? timeToGud(item.date_to) : '--'
 					}),
 					$('<td>', {
 						class: 'text--right',
-						html: secondToTime(item.interval)
+						html: item.interval? secondToTime(item.interval) : '--'
 					}),
 					$('<td>', {
 						class: 'text--center',
